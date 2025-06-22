@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup Artist | Enhancing Your Natural Beauty</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">BeautyGlam</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>BeautyGlam</h1>
+            <p>Enhancing Your Natural Beauty</p>
+            <div>
+                <a href="#booking" class="btn">Book Now</a>
+                <a href="#portfolio" class="btn" style="background-color: transparent; border: 2px solid white; margin-left: 10px;">View Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1526510747491-58f928ec870f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Professional Makeup Artist">
+                </div>
+                <div class="about-text">
+                    <p>With over 5 years of experience in the beauty industry, I specialize in creating stunning looks that enhance your natural beauty. My unique approach combines classic techniques with modern trends to create a look that's perfectly you.</p>
+                    <p>I'm certified by the International Makeup Association and work with premium brands including MAC, Fenty Beauty, and NARS to ensure the highest quality for my clients.</p>
+                    <p>Whether you're preparing for your wedding day, a special event, or a professional photoshoot, I'm dedicated to making you look and feel your absolute best.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2>My Portfolio</h2>
+            <div class="portfolio-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="bridal">Bridal</button>
+                <button class="category-btn" data-category="glam">Glam</button>
+                <button class="category-btn" data-category="editorial">Editorial</button>
+                <button class="category-btn" data-category="natural">Natural</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="bridal">
+                    <img src="https://images.unsplash.com/photo-1560577953-c7fb492e42e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Bridal Makeup">
+                </div>
+                <div class="portfolio-item" data-category="glam">
+                    <img src="https://images.unsplash.com/photo-1503236823255-94609f598e71?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Glam Makeup">
+                </div>
+                <div class="portfolio-item" data-category="editorial">
+                    <img src="https://images.unsplash.com/photo-1526045478516-99145907023c?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Editorial Makeup">
+                </div>
+                <div class="portfolio-item" data-category="natural">
+                    <img src="https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Natural Makeup">
+                </div>
+                <div class="portfolio-item" data-category="bridal">
+                    <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Bridal Makeup">
+                </div>
+                <div class="portfolio-item" data-category="glam">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Glam Makeup">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Services & Pricing</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Bridal Makeup</h3>
+                    <p>Complete bridal makeup with premium products, including lashes and touch-up kit.</p>
+                    <div class="price">₦45,000</div>
+                    <div class="duration">Duration: 90 minutes</div>
+                </div>
+                <div class="service-card">
+                    <h3>Party/Event Makeup</h3>
+                    <p>Full glam makeup for special occasions and events.</p>
+                    <div class="price">₦25,000</div>
+                    <div class="duration">Duration: 60 minutes</div>
+                </div>
+                <div class="service-card">
+                    <h3>Trial Session</h3>
+                    <p>Pre-event consultation and makeup trial to perfect your look.</p>
+                    <div class="price">₦15,000</div>
+                    <div class="duration">Duration: 60 minutes</div>
+                </div>
+                <div class="service-card">
+                    <h3>Add-ons</h3>
+                    <p>Lashes, skin prep, and other enhancements.</p>
+                    <div class="price">₦5,000</div>
+                    <div class="duration">Duration: 15-30 minutes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>Client Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"She made me feel like a queen on my wedding day! My makeup lasted all day and looked flawless in photos."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-image">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client">
+                        </div>
+                        <div>
+                            <div class="client-name">Tolu A.</div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"I've never felt more confident! She understood exactly what I wanted and delivered beyond my expectations."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-image">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+                        </div>
+                        <div>
+                            <div class="client-name">Amaka O.</div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"Professional, punctual, and incredibly talented. My makeup for my graduation photos was perfect!"</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-image">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client">
+                        </div>
+                        <div>
+                            <div class="client-name">Zainab M.</div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <h2>Book Your Session</h2>
+            <form class="booking-form" action="/submit_booking" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Email or Phone</label>
+                    <input type="text" id="contact" name="contact" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="occasion">Occasion</label>
+                    <select id="occasion" name="occasion" class="form-control" required>
+                        <option value="">Select an occasion</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="party">Party/Event</option>
+                        <option value="photoshoot">Photoshoot</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Time</label>
+                    <input type="time" id="time" name="time" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" class="form-control" required>
+                </div>
+                <div class="booking-buttons">
+                    <button type="submit" class="btn">Submit Booking</button>
+                    <a href="https://wa.me/2348012345678" class="btn" style="background-color: #25D366;">Book via WhatsApp</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact & Socials</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>beautyglam@example.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+234 801 234 5678</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>+234 801 234 5678</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Copyright © 2025 BeautyGlam</p>
+            <div class="footer-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
