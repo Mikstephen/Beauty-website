@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Bookings</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .booking-row:nth-child(even) { background-color: #f9f9f9; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>Booking Submissions</h1>
+    <p>Total bookings: {{ bookings|length }}</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Occasion</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Location</th>
+                <th>Submitted</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for booking in bookings %}
+            <tr class="booking-row">
+                <td>{{ booking.name }}</td>
+                <td>{{ booking.contact }}</td>
+                <td>{{ booking.occasion }}</td>
+                <td>{{ booking.date.strftime('%Y-%m-%d') }}</td>
+                <td>{{ booking.time.strftime('%H:%M') }}</td>
+                <td>{{ booking.location }}</td>
+                <td>{{ booking.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="7">No bookings yet.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <p><a href="/">← Back to Website</a></p>
+</body>
+</html>
